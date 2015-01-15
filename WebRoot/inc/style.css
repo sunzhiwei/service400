@@ -1,0 +1,57 @@
+body {color: #666666;font: normal 12px/18px Verdana, sans-serif;background:#f2f2f2;padding:0;margin:0 auto;}
+h1 {margin: 30px 0 15px 0;font-size: 30px;font-weight: bold;font-family: Arial;}
+h1 span {font-size: 50%;letter-spacing: -0.05em;}
+hr {border: none;height: 1px; line-height: 1px;background: #E5E5E5;margin-bottom: 20px;padding: 0;}
+p {margin: 0;padding: 7px 0;}
+a {outline: none;}
+a img {border: 1px solid #BBB;padding: 2px;margin: 10px 20px 10px 0;vertical-align: top;}
+a img.last {margin-right: 0;	}
+ul {margin-bottom: 24px;padding-left: 30px;}
+li{list-style:none;}
+a{color:blue;text-decoration: none;}
+a��v:VISITED{color:blue;text-decoration: none;}
+input{color:#666;}
+
+#content {width: 400px;margin: 40px auto 0 auto;padding: 0 60px 30px 60px;border: solid 1px #cbcbcb;background: #fafafa;-moz-box-shadow: 0px 0px 10px #cbcbcb;-webkit-box-shadow: 0px 0px 10px #cbcbcb;}
+/*�б��������*/
+.operation-a{ background:#85b45f; padding:0 10px; border-radius:10px; height:22px; display:inline-block; text-align:center; line-height:22px; color:#fffefe;white-space:nowrap; }
+/*�б�ҳ���ѯ*/
+.search{min-width:1023px; margin:0; background:#fff;padding:15px; overflow:hidden;}
+.search table{border-collapse:collapse; float:left;}
+.search td{text-align:left;padding:3px 20px 3px 10px;white-space:nowrap; font-size:12px;}
+.search .s-t{text-align:right;padding:3px 0;}
+.search .s-text, .search select, .search textarea{width:168px; height:28px; line-height:28px; border:#ccdae8 solid 1px; color:#666;}
+.search .s-text, .search textarea{padding:0 5px;}
+.search select{width:178px; padding-left:5px;}
+.search a{ background:url(../css/default/images/ui-but_bg.png) no-repeat; display:inline-block; width:92px; height:36px; line-height:36px; text-align:center; color:#fff; font-size:14px;}
+.search .but-search{background-position:0 -148px;}
+.search .but-remove{background-position:0 -185px; margin-left:15px;}
+.search .s-but{ float:right;margin-top:2px;}
+
+.search-list{margin:10px 15px;}
+.search-list .list-title{margin-left:5px; font-size:14px; font-weight:bold; line-height:40px; display:inline-block;}
+
+/*��Ϣҳ��*/
+.tableForm{background:#fff;padding:15px;min-width: 1023px;}
+.tableForm table{border-collapse:collapse; border:none; margin:15px;}
+.tableForm td{border:none; padding:5px 7px;}
+.tableForm .title{border-bottom:#ccdae8 solid 1px;; height:42px; line-height:42px; color:#556e88; font-size:14px; font-weight:bold; width:100%;}
+.tableForm .t-title{text-align:right;}
+.tableForm .t-text,.tableForm textarea,.tableForm select{ border:#d1deea solid 1px; height:30px; line-height:30px; width:200px; padding:0 8px;}
+.tableForm textarea{width:650px; line-height:28px; height:auto; font-size:12px; color:#666;}
+.tableForm select{padding:0 0 0 8px; color:#666;}
+
+.tableForm .readonly{border:#d5d4d4 solid 1px; background:#e5e4e4;}
+.tableForm .required{color:red;font-size:15px;margin-left:3px;}
+
+.tableForm ul{padding-left:0;*margin-left: -43px;}
+.tableForm li{float:left; height:25px;width:150px;}
+
+.tableForm .t-but{text-align:right;}
+.t-but a{ background:url(../css/default/images/tableForm-but-bg.png) no-repeat; height:36px; line-height:36px; color:#fff;width:78px; display:inline-block; text-align:center; font-size:14px;}
+.t-but .but-cancel{background-position:0 0;}
+.t-but .but-change{background-position:0 -37px;}
+.t-but .but-next{width:102px; background-position:0 -74px;}
+
+/*�ϴ�����*/
+.om-fileupload-queueitem{padding:5px;}

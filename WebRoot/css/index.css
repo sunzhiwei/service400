@@ -1,0 +1,68 @@
+body {
+	font: 12px/20px "Î¢ÈíÑÅºÚ", "ËÎÌå", Arial, sans-serif, Verdana, Tahoma;
+	padding: 0;
+	margin: 0;
+}
+a .cs-navi-tab:link {
+ text-decoration: none;
+}
+a .cs-navi-tab:visited {
+ text-decoration: none;
+}
+a .cs-navi-tab:hover {
+ text-decoration: underline;
+}
+a .cs-navi-tab:active {
+ text-decoration: none;
+}
+.cs-north {
+	height:64px;background:#2d6eb5 url(default/images/header_bg.jpg) no-repeat left; border:none;
+}
+.cs-north-bg {
+	width: 100%;
+	height: 100%;
+	background: url(../themes/gray/images/header_bg.png) repeat-x;
+}
+.cs-north-logo {
+	height: 32px;
+	margin: 15px 0px 0px 25px;
+	display: inline-block;
+	background:url(default/images/logo.png) no-repeat;
+	width:239px;
+	float:left;
+}
+.cs-west {
+	width:200px;padding:0px;border-left:1px solid #99BBE8;
+}
+.cs-south {
+	height:25px;background:url('../themes/gray/images/panel_title.gif') repeat-x;padding:0px;text-align:center;
+}
+.cs-navi-tab {
+	padding: 5px; color:#DDDFE2; text-decoration:none; margin-left:20px; line-height:35px;
+}
+.cs-div{border-left:#484a4e 4px solid;margin-left:51px; *margin-left:29px; min-height:100%; *height:100%; overflow-y:auto;}
+.cs-tab-menu {
+	width:120px;
+}
+.cs-home-remark {padding:20px;text-align:center;}
+.ui-skin-nav{float: right;padding: 0;margin-right:25px; margin-top:18px;list-style: none outside none;}
+		
+.ui-skin-nav .li-skinitem{float: left;font-size: 12px;margin-left:50px;text-align: center; color:#FFFFFF; font-weight:bold; font:12px ËÎÌå; line-height:33px;}
+.ui-skin-nav .li-skinitem a{ text-decoration:none; display:inline-block; color:#f9fbfe;}
+.ui-skin-nav .li-skinitem a:hover{color:#f1f1f1;}
+.ui-skin-nav .icon{background:url(default/images/ui-but_bg.png) no-repeat; padding-left:25px; line-height:21px; display:inline-block; cursor:pointer; margin-top:6px;}
+.ui-skin-nav .exit{background-position:0 -57px;}
+.ui-skin-nav .alterpwd{background-position:0 -34px;}
+
+/*×ó²àµ¼º½Í¼±ê*/
+.panel-title-icon{background:url(default/images/panel-title-icon.png) no-repeat; padding-left:35px; height:35px;}
+.panel-title-icon-1{ background-position:0 0;}
+.panel-title-icon-2{ background-position:0 -35px;}
+.panel-title-icon-3{ background-position:0 -70px;}
+.panel-title-icon-4{ background-position:0 -105px;}
+.panel-title-icon-5{ background-position:0 -140px;}
+.panel-title-icon-6{ background-position:0 -175px;}
+.panel-title-icon-7{ background-position:0 -210px;}
+.panel-title-icon-8{ background-position:0 -245px;}
+.panel-title-icon-9{ background-position:0 -280px;}
+.panel-title-icon-10{ background-position:0 -315px;}

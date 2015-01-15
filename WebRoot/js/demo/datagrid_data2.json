@@ -1,0 +1,12 @@
+﻿{	"total":7,  
+	"rows":[
+		{"yjtype":"合同到期预警","yjitem":"邮件","title":"合同到期预警","sendtime":"2012-12-11 10:00:00","dept":"禅城区季华路营业部-D3直销四组","position":"职员","receiver":"张三;李四;王五","mail":"sanzhang@creditease.cn;sili@creditease.cn;wuwang@creditease.cn","mobileno":""},
+		{"yjtype":"合同到期预警","yjitem":"邮件","title":"合同到期预警","sendtime":"2012-12-11 10:00:00","dept":"禅城区季华路营业部-D3直销四组","position":"职员","receiver":"张三;李四;王五","mail":"sanzhang@creditease.cn;sili@creditease.cn;wuwang@creditease.cn","mobileno":""},
+		{"yjtype":"员工生日预警","yjitem":"短信","title":"员工生日预警","sendtime":"2012-12-10 11:00:00","dept":"禅城区季华路营业部-D3直销四组","position":"职员","receiver":"张小三","mail":"","mobileno":"13998761234"},
+		{"yjtype":"员工生日预警","yjitem":"短信","title":"员工生日预警","sendtime":"2012-12-10 11:00:00","dept":"禅城区季华路营业部-D3直销四组","position":"职员","receiver":"王小五","mail":"","mobileno":"13812348765"},
+		{"yjtype":"员工生日预警","yjitem":"短信","title":"员工生日预警","sendtime":"2012-12-10 11:00:00","dept":"禅城区季华路营业部-D3直销四组","position":"职员","receiver":"李小四","mail":"","mobileno":"13800138000"},
+		{"yjtype":"员工生日预警","yjitem":"短信","title":"员工生日预警","sendtime":"2012-12-10 11:00:00","dept":"禅城区季华路营业部-D3直销四组","position":"职员","receiver":"万鑫","mail":"","mobileno":"13812348765"},
+		{"yjtype":"员工生日预警","yjitem":"短信","title":"员工生日预警","sendtime":"2012-12-10 11:00:00","dept":"禅城区季华路营业部-D3直销四组","position":"职员","receiver":"陈小明","mail":"","mobileno":"13812348765"}
+	]
+}
+

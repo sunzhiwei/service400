@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 配置为开发模式 -->
+	<constant name="struts.devMode" value="true" />
+	<!-- 配置扩展名为action -->
+	<constant name="struts.action.extension" value="action" />
+	<!-- 配置主题 -->
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 让OGNL中可以使用静态的方法 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	
+	<package name="default" namespace="/" extends="json-default">
+	<interceptors>
+			<!-- 声明一个拦截器-->
+			<interceptor name="checkSecurity" class="com.yixin.service400.interceptor.checkSecurityInterceptor"></interceptor>
+
+			<!-- 重新定义defaultStack拦截器栈，需要先验证访问路径（其中这个全局拦截器，应用于所有的action） -->
+			<interceptor-stack name="defaultStack">
+				<interceptor-ref name="checkSecurity" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+	
+	   <global-results>
+	        <result name="math-exception">/pages/service400/exception.jsp</result>
+	        <result name="tologin">/pages/service400/index.jsp</result>
+      </global-results>
+	   <global-exception-mappings>
+		<exception-mapping result="math-exception"
+			exception="java.lang.ArithmeticException" />
+		<exception-mapping result="math-exception"
+			exception="java.lang.Exception" />
+        </global-exception-mappings>
+		
+		<!-- 首页 -->
+		<action name="homeAction_*" class="homeAction" method="{1}">
+			<result name="{1}">/pages/service400/{1}.jsp</result>
+		</action>
+
+		<action name="loginAction_*" class="loginAction" method="{1}">
+
+		</action>
+
+		<action name="userAction_*" class="userAction" method="{1}">
+			<result name="toIndex">/pages/service400/toIndex.jsp</result>
+		</action>
+		 <action name="workGroupAction_*" class="workGroupAction" method="{1}">
+          <result name="editUI">/pages/service400/workgroup_edit.jsp</result>
+          <result name="detailUI">/pages/service400/workgroup_detail.jsp</result>
+          <result name="addUI">/pages/service400/workgroup_add.jsp</result>
+          <result name="toworkgroup">/pages/service400/workgroup.jsp</result>
+          <result name="queryPageJson" type="json">
+				<param name="root">pagination</param>
+			</result>
+        </action>
+		<action name="num400Action_*" class="num400Action" method="{1}">
+			<result name="to400page">/pages/service400/num400/400page.jsp</result>
+			<result name="add400" type="redirectAction">/num400Action_to400page.action</result>
+			<result name="update400" type="redirectAction">/num400Action_to400page.action</result>
+			<result name="delete400" type="redirectAction">/num400Action_to400page.action</result>
+			<result name="queryPageJson" type="json">
+				<param name="root">pagination</param>
+			</result>
+		</action>
+		<action name="user400Action_*" class="user400Action" method="{1}">
+			<result name="listUser">/pages/service400/user/listUser.jsp</result>
+			<result name="addUser">/pages/service400/user/addUser.jsp</result>
+			<result name="editUI">/pages/service400/user/editUser.jsp</result>
+			<result name="updatePWDUI">/pages/service400/user/updatePWD.jsp</result>
+			<result name="queryPageJson" type="json">
+				<param name="root">pagination</param>
+			</result>
+		</action>
+		<action name="apply400Action_*" class="apply400Action" method="{1}">
+			<result name="apply400">/pages/service400/apply/apply.jsp</result>
+			<result name="check400">/pages/service400/apply/check_new.jsp</result>
+			<result name="addApply">/pages/service400/apply/addApply.jsp</result>
+			<result name="conApp">/pages/service400/apply/conApp.jsp</result>
+			<result name="conAppSup" type="redirectAction">/apply400Action_check400.action</result>
+			<result name="clsLoop" type="redirectAction">/apply400Action_check400.action</result>
+			<result name="emailOK">/pages/service400/apply/emailOK.jsp</result>
+			<result name="queryPageJson" type="json">
+				<param name="root">pagination</param>
+			</result>
+		</action>
+		<action name="ivr400Action_*" class="ivr400Action" method="{1}">
+			<result name="showIVR">/pages/service400/ivr/showIVR.jsp</result>
+			<result name="applyList">/pages/service400/ivr/applyList.jsp</result>
+			<result name="addKey" type="redirectAction">/ivr400Action_show.action</result>
+			<result name="show">/pages/service400/ivr/showIVR.jsp</result>
+			<result name="updateKey" type="redirectAction">/ivr400Action_show.action</result>
+			<result name="deleteKey" type="redirectAction">/ivr400Action_show.action</result>
+			<result name="addGroupKey" type="redirectAction">/ivr400Action_show.action</result>
+			<result name="deleteGroup" type="redirectAction">/ivr400Action_show.action</result>
+			<result name="sendIVRMail" type="redirectAction">/ivr400Action_show.action</result>
+		</action>
+		<action name="query400Action_*" class="query400Action" method="{1}">
+			<result name="closeLoop">/pages/service400/query/closeLoop_new.jsp</result>
+			<result name="queryHis">/pages/service400/query/queryHis_new.jsp</result>
+			<result name="closeLoopByID" type="redirectAction">query400Action_closeLoop.action</result>
+			<result name="queryPageJson" type="json">
+				<param name="root">pagination</param>
+			</result>
+		</action>
+		<action name="notes400Action_*" class="notes400Action" method="{1}">
+			<result name="editNotes">/pages/service400/apply/editNotes.jsp</result>
+			<result name="addNotes" type="redirectAction">/apply400Action_apply400.action</result>
+		</action>
+	</package>
+
+</struts>

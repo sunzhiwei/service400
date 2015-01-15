@@ -1,0 +1,51 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+
+
+<hibernate-configuration>
+<session-factory>
+
+	<!-- 数据库信息（连接信息写到spring的配置文件中） -->
+	<property name="dialect">
+		org.hibernate.dialect.Oracle9Dialect
+	</property>
+
+	<!-- 其他配置 -->
+	<property name="show_sql">true</property>
+	<property name="hbm2ddl.auto">update</property>
+
+	<!-- 导入映射配置 -->
+	<property name="format_sql">true</property>
+	<mapping resource="com/yixin/service400/bean/TService400.hbm.xml" />
+	<mapping
+		resource="com/yixin/service400/bean/TService400Applicationform.hbm.xml" />
+	<mapping
+		resource="com/yixin/service400/bean/TService400Key.hbm.xml" />
+	<mapping
+		resource="com/yixin/service400/bean/TService400KeyWorkgroup.hbm.xml" />
+	<mapping
+		resource="com/yixin/service400/bean/TService400OverflowGroup.hbm.xml" />
+	<mapping
+		resource="com/yixin/service400/bean/TService400OverflowPhone.hbm.xml" />
+	<mapping
+		resource="com/yixin/service400/bean/TService400Privilege.hbm.xml" />
+	<mapping
+		resource="com/yixin/service400/bean/TService400Role.hbm.xml" />
+	<mapping
+		resource="com/yixin/service400/bean/TService400RolePrivilege.hbm.xml" />
+	<mapping
+		resource="com/yixin/service400/bean/TService400User.hbm.xml" />
+	<mapping
+		resource="com/yixin/service400/bean/TService400UserRole.hbm.xml" />
+	<mapping
+		resource="com/yixin/service400/bean/TService400Workgroup.hbm.xml" />
+	<mapping
+		resource="com/yixin/service400/bean/TService400User400num.hbm.xml" />
+	<mapping
+		resource="com/yixin/service400/bean/TService400File.hbm.xml" />
+	<mapping
+		resource="com/yixin/service400/bean/TService400Notes.hbm.xml" />
+</session-factory>
+</hibernate-configuration>

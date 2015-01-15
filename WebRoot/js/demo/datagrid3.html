@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>预警明细 Demo</title>
+	<link rel="stylesheet" type="text/css" href="../themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="demo.css">
+	<script type="text/javascript" src="../jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+	<script>
+		$(function(){
+			$('#tt').datagrid({
+				url: 'datagrid_data2.json',
+				title: '预警明细',
+				width: 1000,
+				height: 'auto',
+				nowrap: false,
+				striped: true,
+				collapsible:true,
+				fitColumns: true,
+				pagination:true,
+				rownumbers:true,
+				//url:'form_data.json',  
+				columns:[[
+					{field:'yjtype',title:'预警类别',width:100,align:'center'},
+					{field:'yjitem',title:'预警方式',width:60,align:'center'},
+					{field:'title',title:'主 题',width:150,align:'center'},
+					{field:'sendtime',title:'发送时间',width:100,align:'center'},
+					{field:'dept',title:'部 门',width:110,align:'center'},
+					{field:'position',title:'职 位',width:100,align:'center'},
+					{field:'mail',title:'收件人邮箱',width:160,align:'center'},
+					{field:'receiver',title:'收件人',width:120,align:'center'},
+					
+					{field:'mobileno',title:'收件人手机',width:100,align:'center'}
+				]],
+				onHeaderContextMenu: function(e, field){
+					e.preventDefault();
+					if (!$('#tmenu').length){
+						createColumnMenu();
+					}
+					$('#tmenu').menu('show', {
+						left:e.pageX,
+						top:e.pageY
+					});
+				}
+			});
+		});
+		
+		function createColumnMenu(){
+			var tmenu = $('<div id="tmenu" style="width:100px;"></div>').appendTo('body');
+			var fields = $('#tt').datagrid('getColumnFields');
+			for(var i=0; i<fields.length; i++){
+				$('<div iconCls="icon-ok"/>').html(fields[i]).appendTo(tmenu);
+			}
+			tmenu.menu({
+				onClick: function(item){
+					if (item.iconCls=='icon-ok'){
+						$('#tt').datagrid('hideColumn', item.text);
+						tmenu.menu('setIcon', {
+							target: item.target,
+							iconCls: 'icon-empty'
+						});
+					} else {
+						$('#tt').datagrid('showColumn', item.text);
+						tmenu.menu('setIcon', {
+							target: item.target,
+							iconCls: 'icon-ok'
+						});
+					}
+				}
+			});
+		}
+		function loaddata(){
+			$('#tt').datagrid('load','datagrid_data2.json');
+		}
+	</script>
+</head>
+<body>
+	<h2>预警明细Demo</h2>
+	<!--<div class="demo-info" style="margin-bottom:10px">
+		<div class="demo-tip icon-tip"></div>
+		<div>生日预警、司龄预警，一人次一条信息</div>
+        <div>转正预警、合同到期预警，一批次一条信息，但是收件人是多人还是单人？如果是多人，职位信息如何显示</div>
+	</div>-->
+	<div style="background:#fafafa;padding:5px;width:700px;height:120px;">
+    
+	    <form id="ff" method="post">
+        <table width="" border="0">
+  <tr>
+    <td><strong>发送时间从</strong></td>
+    <td align="right"><input class="easyui-datetimebox" name="begin"  formatter="2012-11-11 11:00:00" value="" style="width:150px" ></td>
+    <td><strong>至</strong></td>
+    
+    <td align="right"><input class="easyui-datetimebox" name="end"  value="" style="width:150px"></td>
+    <td align="right">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><strong>收件人:</strong></td>
+    <td align="right"><input class="easyui-validatebox" type="text" name="email" validType="email"></input></td>
+    <td><strong>
+      <label for="subject">收件部门:</label>
+    </strong></td>
+    
+    <td align="right"><input class="easyui-validatebox" type="text" name="subject"></input></td>
+    <td align="right">&nbsp;</td>
+  </tr>
+  <tr>
+     <td><strong>收件职位:</strong></td>
+    <td align="right"><input class="easyui-validatebox" type="text" name="email" validType="email"></input></td>
+     <td><strong>
+      <label for="message">预警主题:</label>
+    </strong></td>
+    <td align="right"><input name="message" >
+      </input></td>
+    <td>&nbsp;</td>
+  </tr>
+  
+  <tr>
+    <td><strong>
+      <label for="yjtype">预警类别:</label>
+    </strong></td>
+    <td align="right"><input class="easyui-combobox" 
+						name="yjtype"
+						url="combobox_data.json" 
+						valueField="id" 
+						textField="text" 
+						panelHeight="auto"></td>
+     <td><strong>
+       <label for="yjtype">预警方式:</label>
+     </strong></td>
+     
+     <td align="right"><input class="easyui-combobox" 
+						name="yjitem"
+						url="combobox_data2.json" 
+						valueField="id" 
+						textField="text" 
+						panelHeight="auto"></td>
+        <td align="right" valign="bottom"><input type="submit" onClick="loaddata()"></input></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td></td>
+    <td> </td>
+  </tr>
+</table>
+	    </form>
+	</div>
+	<table id="tt"></table>
+	
+</body>
+</html>

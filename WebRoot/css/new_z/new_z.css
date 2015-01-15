@@ -1,0 +1,33 @@
+/*可申请的400号码*/
+div,table,td,tr,body,div,inpu,a,img,p,form{ margin:0; padding:0; border:0;}
+.sq_box{ border:1px solid #E7E7E7;font-family:"Arial"}
+.sq_box table{ width:100%;}
+.sq_box table th{color:#666666;}
+.sq_box table td{text-align:center;  border-top:1px solid #E7E7E7;}
+.sq_box table th,.sq_box table td{font-size:12px; }
+.sq_box table tr{height:35px;}
+.table_head{ background:#EFF8FE; height:32px;}
+.yellow{ color:#EF7700;}
+.green{ color:#449A03;}
+.table_top{ font-size:13px; background: url('../../images/table_top.png') 0 0 no-repeat; height:33px; color:#FFFFFF; font-weight:bold; line-height:33px; padding-left:11px;}
+.sqb_bigbox tr td p{ margin-right:5px; text-align:right; font-size: 14px;}
+.list_box{margin:0 auto; padding:15px 0; background: url('../../images/list_boxbg.png') 0 0 repeat-x; width:100%; height:100%; border:1px solid #E8E8E8}
+.list_box tr{ line-height:30px;}
+.list_box tr input{ line-height:20px;}
+.orange{ color:#FF8723; font-size:14px; margin-top:-3px;}
+.three_box td{ text-align:center;}
+.one{  width:30%}
+.fuchu{margin-top: 2px; float: left; line-height:24px; background:#46C2FF; color:#FFFFFF;display: block;
+width:76%;}
+.jianj input{ margin:0 10px;}
+
+/*IVR页面内容*/
+.ivr_table_top{ font-size:13px; background: url('../../images/ivr_table.png') 0 0 no-repeat; height:33px; color:#FFFFFF; font-weight:bold; line-height:33px; padding-left:11px;}
+.tjsq{ margin:0 13px; background:#407FC3; font-size: 12px; color:#FFFFFF; padding:5px; text-decoration:none; border:1px solid #266EBC;}
+.two_tij{ margin:15px 0 5px 15px;}
+.some{font-size:12px; text-align:right;}
+.czsp{ margin:0 8px;}
+.line{ border-top:1px solid #cccccc; width:300px; margin:20px 20px 10px; margin-right:5px;}
+
+
+

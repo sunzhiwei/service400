@@ -1,0 +1,42 @@
+   .groupCss{
+       padding:5px;
+       color: #15428B;
+       font-size:12px;
+       background:#E0ECFF;
+       border: 1px solid #99BBE8;
+       cursor:pointer;
+       height:20px;
+   }
+   .equCss{
+       background:#FFFFFF;padding-top:5px;border: 1px solid #99BBE8;
+       height:73%; 
+   }
+   .equTable{
+       font-size:12px;width:100%;padding: 0px;
+   } 
+   .equTable tr{
+        height: 25px;padding-left: 10px;cursor: pointer;
+   }
+   .equTable td a{
+        text-decoration: none;
+   }
+   .equTable td a:hover{
+        text-decoration: underline;
+   }
+   .righOverTree{
+       background:#C6E7FF;
+   }
+   .rightOutTree{
+       background:#FFFFFF;
+   }
+  
+   .divScroll{
+        OVERFLOW:auto;
+        scrollbar-face-color: #FFFFFF;
+        scrollbar-shadow-color: #D2E5F4;
+        scrollbar-highlight-color: #D2E5F4;
+        scrollbar-3dlight-color: #FFFFFF;
+        scrollbar-darkshadow-color: #FFFFFF;
+        scrollbar-track-color: #FFFFFF; 
+      scrollbar-arrow-color: #D2E5F4";
+        }

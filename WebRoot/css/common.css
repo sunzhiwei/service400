@@ -1,0 +1,15 @@
+	a{
+			color:blue;
+			text-decoration: none;
+		}
+		a：v:VISITED{
+			color:blue;
+			text-decoration: none;
+		}
+
+table{
+	font-size: 13;
+}
+select{
+	width:150px;
+}
